@@ -1,0 +1,43 @@
+html {
+    background-color: #f3f4f9;
+}
+
+/*懒人加载*/
+img[lazy=loading] {
+    transform: scale(.3);
+}
+
+.page-info-list {
+    /*得到滑动区的高度*/
+    height: calc(100vh - 490px);
+    overflow: hidden;
+}
+.page-view-list{
+    height: calc(100vh - 200px);
+    overflow: hidden;
+    margin-top: 90px;
+}
+
+/*切换视图的时候能全屏固定*/
+.page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f3f4f9;
+    z-index: 999;
+    /* 让溢出的内容通过滚动查看 */
+    overflow: scroll;
+}
+/* 页面的进入退出转场动画 */
+.slide-enter-active,.slide-leave-active{
+    transition: all 0.3s;
+}
+.slide-enter,.slide-leave-to{
+    transform: translateX(100%);
+}
+.mt90{
+    margin-top: 90px;
+}
+
